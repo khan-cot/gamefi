@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper col-flex" id="ourteam">
-    <Dialog v-model="dialog" :data="person"/>
+    <Dialog v-model="dialog" :data="person" @next="next" @prev="prev"/>
     <h1 class="title">Our Team</h1>
     <div class="grid">
       <div v-for="(member, i) in members" :key="i"
-           class="member" @click.stop="openDialog(member)">
+           class="member" @click.stop="openDialog(member, i)">
         <img alt :src="`members/${member.image}`"/>
         <div class="info">
           <div class="info-btn">Discover</div>
@@ -28,6 +28,7 @@ export default {
     return {
       dialog: false,
       person: null,
+      index: 0,
       members: [
         {
           name: 'Thi Truong',
@@ -102,11 +103,27 @@ export default {
     }
   },
   methods: {
-    openDialog(data) {
-      // this.person = data
-      // this.dialog = true
-      return data
-    }
+    openDialog(data, index) {
+      this.index = index
+      this.person = data
+      this.dialog = true
+    },
+    next() {
+      let index = this.index + 1
+      if(this.index === this.members.length -1) {
+        index = 0
+      }
+      this.person = this.members[index]
+      this.index = index
+    },
+    prev() {
+      if(this.index === 0) {
+        this.index = this.members.length - 1
+      } else {
+        this.index--
+      }
+      this.person = this.members[this.index]
+    },
   }
 }
 </script>

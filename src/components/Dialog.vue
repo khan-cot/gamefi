@@ -3,23 +3,25 @@
     <div v-show="value" class="overlay" @click="close"></div>
     <transition name="fade">
       <div v-show="value" class="main" ref="main">
-        <img class="image" alt :src="image"/>
+        <img class="close" alt src="../assets/close2.svg" @click="close"/>
+        <img class="right" alt src="../assets/arrow_right.svg" @click="next"/>
+        <img class="left" alt src="../assets/arrow_left.svg" @click="prev"/>
+        <div class="image">
+          <img alt :src="image"/>
+        </div>
         <div class="content">
           <div class="header">
-            <div class="info">
-              <h4 class="title">{{name}}</h4>
-              <div class="subtitle">{{title}}</div>
-            </div>
-            <div class="link">
-              <a v-for="(link, i) in links" target="_blank" :key="i" :href="link.href">
-                <img alt :src="link.img"/>
-              </a>
-            </div>
+            <h4 class="title">{{name}}</h4>
+            <div class="subtitle">{{title}}</div>
           </div>
           <div class="detail">
             <p v-for="(desc, i) in descriptions" :key="i">{{desc}}</p>
           </div>
-          <img class="close" alt src="../assets/close2.svg" @click="close"/>
+          <div class="link">
+            <a v-for="(link, i) in links" target="_blank" :key="i" :href="link.href">
+              <img alt :src="link.img"/>
+            </a>
+          </div>
         </div>
       </div>
     </transition>
@@ -64,6 +66,12 @@ export default {
     close() {
       this.$emit('input', false)
     },
+    next() {
+      this.$emit('next')
+    },
+    prev() {
+      this.$emit('prev')
+    }
   }
 }
 </script>
@@ -93,25 +101,52 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #272B5D;
-    box-shadow: 0px 8px 16px rgba(27, 27, 27, 0.16),-1px -1px 0 rgba(255, 255, 255, 0.24);
-    padding: 32px;
+    background: #171717;
+    padding: 60px 80px;
     border-radius: 20px;
     display: flex;
     align-items: flex-start;
-    width: 800px;
+    width: 1080px;
   }
 
   .close {
     position: absolute;
-    bottom: -40px;
-    left: calc(50% - 16px);
+    top: 20px;
+    right: 20px;
     cursor: pointer;
   }
 
+  .right,
+  .left {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+
+  .right {
+    right: 20px;
+  }
+
+  .left {
+    left: 20px;
+  }
+
   .image {
-    margin-right: 40px;
-    max-width: 280px;
+    margin-right: 80px;
+    min-width: 300px;
+    position: relative;
+  }
+
+  .image:after {
+    content: '';
+    position: absolute;
+    inset: 20px -20px -20px 20px;
+    border: 1px solid var(--primary);
+  }
+
+  .image img {
+    width: 100%;
   }
 
   .content {
@@ -121,17 +156,27 @@ export default {
   }
 
   .header {
-    display: flex;
-    justify-content: space-between;
+    margin-top: 12px;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
   }
 
   .subtitle {
     margin: 4px 0;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--primary);
   }
 
   .link {
     display: flex;
     align-items: center;
+    margin-top: 40px;
   }
 
   .link a {
@@ -140,7 +185,9 @@ export default {
 
   .detail p{
     margin: 12px 0;
-    color: #D9DAF2;
+    font-size: 18px;
+    line-height: 28px;
+    color: #D1D1D1;
   }
 
   @media screen and (max-width: 600px) {

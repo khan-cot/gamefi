@@ -1,0 +1,26 @@
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Hanken Grotesk";
+    font-size: 16px;
+    background: #171717;
+    color: White;
+}
+
+:root {
+    --padding-section: 160px;
+    --padding-article: 120px;
+    --primary: #72F34B;
+}
+
+.primary {
+    color: var(--primary);
+}
+
+img {
+    max-width: 100%;
+}

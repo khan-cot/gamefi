@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
   #features {
-    margin-top: 200px;
+    margin-top: 400px;
     padding-top: 100px;
   }
 

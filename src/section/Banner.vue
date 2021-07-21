@@ -94,12 +94,12 @@ export default {
 
   .intro {
     position: absolute;
-    bottom: 0;
+    bottom: 200px;
     left: 100px;
     right: 100px;
-    transform: translateY(50%);
+    transform: translateY(100%);
     background: #171717;
-    padding: 60px;
+    padding: 80px;
   }
 
   .intro-title {

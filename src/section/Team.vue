@@ -31,116 +31,72 @@ export default {
       members: [
         {
           name: 'Thi Truong',
-          title: 'Co-founder & CEO',
+          title: 'Executive Advisor',
           image: 'member.png',
           links: [{href: 'https://www.linkedin.com/in/mangcut/', img: 'linkedin.svg'}],
           descriptions: [
-            'Thi has been a blockchain soldier with hands-on in-depth experience in blockchain area for several years.',
-            'He started as a Software Engineer, then Solution Architect, then a Director at FPT Corp. After leaving FPT, he joined Kyber Network, one of the most successful blockchain projects in Asia, as a Product Manager.',
-            'Thi founded PolkaFoundry at the end of 2018 after getting frustrated with blockchain dapps\' UX, with the determination to make the benefits of blockchain more accessible to normal people.'
+            'Founder and CEO of PolkaFoundry and Red Kite; incubator of Faraland and KabyArena.',
+            'Mr. Thi has been a blockchain soldier with hands-on, in-depth expertise in the blockchain area for many years. He started as a Solution Architect, then a Director at FPT, Vietnam\'s biggest IT company. He is the former Product Manager in Kyber Network, one of Asia’s most successful blockchain projects, before founding PolkaFoundry in 2018.',
           ],
-          shortcut: 'Former senior manager at Kyber Network, a blockchain solder with hands-on in-dept experience for many years...'
         },
         {
-          name: 'Ron Nguyen',
-          title: 'Head of Partnerships',
+          name: 'My Nguyen',
+          title: 'Head of Marketing & Operation',
           image: 'member.png',
-          links: [{href: 'https://www.linkedin.com/in/duyhn/', img: 'linkedin.svg'}],
+          // links: [{href: '', img: 'linkedin.svg'}],
           descriptions: [
-            'A graduate of RMIT in Melbourne, Australia, armed with 10 years of experience in marketing, Ron has gained experience working with small to large companies in management positions, including Line Vietnam, NHG, and Enterprise Rent-a-Car.',
-            'He is proficient in liaising with influencers and brand partners to forge strategic alliances, and building partnerships to deliver branding solutions.'
+            'Ms. My owns 5+ years experience in Corporate Communications at SmartOSC, a premium ecommerce agency with more than 500 clients around the world. In line with her passion for technologies, My later co-founded and undertook the Executive Director position in JunctionxHaNoi, Vietnam’s first hackathon in 2019.',
           ],
-          shortcut: 'A graduate of RMIT in Melbourne, Australia, armed with 10 years of experience in marketing...'
         },
         {
-          name: 'Trang Mai',
-          title: 'Head of R&D',
+          name: 'Linh Do',
+          title: 'QA Lead',
           image: 'member.png',
-          links: [{href: 'https://www.linkedin.com/in/trangmx/', img: 'linkedin.svg'}],
+          links: [{href: 'https://www.linkedin.com/in/linh-do-29b95a27/', img: 'linkedin.svg'}],
           descriptions: [
-            'Holding a Ph.D. and Postdoc from Kyoto University in Japan, Trang has won several world-class academic awards and co-authored many books.',
-            'Trang is leading PolkaFoundry’s research efforts on current challenging blockchain frontiers, including quantum-resistant cryptography, multi-party computation, and atomic cross-chain operations.'
+            'Holder of HDSE (Higher Diploma in Software Engineering) with 10 years of experience in QA.',
+            'Ms. Linh has a demonstrated history of working as SQA Engineer for renowned global corporations including Optimizely, a platform that provides digital experience solutions to Microsoft, IBM and Ebay. As a QA Lead, she not only shows exceptional technical knowledge and analytical skills but also proves to be a supported spirit leader.'
           ],
-          shortcut: 'Holding a Ph.D. from Kyoto University in Japan, Trang has won several world-class academic awards...'
         },
         {
-          name: 'Huy Hoang',
-          title: 'Head of Platform Services',
+          name: 'Hai Duong',
+          title: 'Tech Lead',
           image: 'member.png',
-          links: [{href: '', img: 'linkedin.svg'}],
+          links: [{href: 'https://www.linkedin.com/in/haicon2321993', img: 'linkedin.svg'}],
           descriptions: [
-            'Huy has over 10 years of experience working directly with large-scale clients and IT vendors in Japan, including 3 years in the blockchain area.',
-            'He is known for his skills and insights about decentralization protocol architecture, system scalability and security, and DeFi solutions.'
+            'Former Director Of Product Development in CyRadar, Top 20 Cyber Security Innovators in 2019 ranked by US magazine Technology Innovation.',
+            'Prior to joining GameFi, Hai has 7 years of experience in the development and maintenance of large-scale products in first-tier technology companies, FPT Corp and CyRadar. He is good at leading the tech team building products from 0 to 1 and achieving rapid growth.'
           ],
-          shortcut: 'An expert in decentralization protocols with 10+ years of experience including 3 years in the blockchain area...'
         },
         {
-          name: 'Luong Hoa',
-          title: 'Lead Engineer',
+          name: 'Thanh Tung',
+          title: 'Blockchain Developer',
           image: 'member.png',
-          links: [{href: 'https://www.linkedin.com/in/luonghoa/', img: 'linkedin.svg'}],
+          links: [{href: 'https://www.linkedin.com/in/thanh-tung-a87262142/', img: 'linkedin.svg'}],
           descriptions: [
-            'Luong is a seasoned Software Engineer with a demonstrated history of working in the IT and services industry, including the position as a Researcher at Nomura Research Institute, Japan.',
-            'With years of experience developing the core of blockchain, he is actively involving in the rebuild of PolkaFoundry on Substrate framework.'
+            'A Fullstack Developer with 5+ years of broad experience in JavaScript/ES6 & NodeJs & ReactJs/React Native.',
+            'Mr. Tung is a crypto enthusiast and shows a high level of knowledge and skills in Blockchain, Rust, and Solidity languages. Tung has previously been one of the core developers in some blockchain-based projects such as PolkaFoundry and Red Kite launchpad.'
           ],
-          shortcut: 'A seasoned blockchain engineer, former researcher at Nomura Research Institute in Tokyo...'
-        }
-      ],
-      advisors: [
-        {
-          name: 'Lester Lim',
-          title: 'Strategy Advisor',
-          image: 'lesterlim.png',
-          links: [{href: 'https://www.linkedin.com/in/lesterlim15/', img: 'linkedin.svg'}],
-          descriptions: [
-            'Founder of X21 Digital, also Strategic Advisor to MahaDao & Finxflo, etc.',
-            'Lester guides PolkaFoundry on strategy, partnership and offers advice on various matters to help avoid mistakes and innovate faster to realize its vision.'
-          ],
-          shortcut: 'Founder of X21 Digital, also Strategic Advisor to MahaDao & Finxflo...'
         },
         {
-          name: 'Garlam Won',
-          title: 'Marketing Advisor',
-          image: 'garlam.png',
-          links: [{href: 'https://www.linkedin.com/in/garlam/', img: 'linkedin.svg'}],
+          name: 'Hieu Ha',
+          title: 'Senior Penetration Tester',
+          image: 'member.png',
+          links: [{href: 'https://www.linkedin.com/in/hieuhatrung/', img: 'linkedin.svg'}],
           descriptions: [
-            'Garlam was behind the marketing of some of the most successful projects including Harmony, Sandbox, MANTRADAO, APY.Finance and others.',
-            'As an ex-investment banker at JP Morgan & ex-Management consultant at Deloitte, Garlam exerts influence in various parts of the blockchain ecosystem through his in-depth connections with the communities in China, Korea, Canada and the US.'
-          ],
-          shortcut: 'Behind the marketing of many successful projects including Harmony, Sandbox, MANTRADAO...'
+              'A penetration test expert/coach with more than 12,000 followers.',
+              'Hieu devotes to performing penetration testing, security auditing, and vulnerability assessments following OWASP, PTES Framework standards. He has 5+ years of experience working with web applications and web API, Android & iOS applications, IoT devices, network devices, Windows, Linux, and Unix Servers.'
+          ]
         },
         {
-          name: 'Tung Ta',
-          title: 'Business Advisor',
-          image: 'tung.png',
-          links: [{href: 'https://www.linkedin.com/in/ta-son-tung-062454a9/', img: 'linkedin.svg'}],
+          name: 'Thanh Hoa',
+          title: 'Front-end Developer',
+          image: 'member.png',
+          links: [{href: 'https://www.linkedin.com/in/hoa-lee/', img: 'linkedin.svg'}],
           descriptions: [
-            'Tung Ta, a Forbes 30  Under 30 in 2015, is the co-founder and executive chairman of RikkeiSoft, one of the largest software companies in Vietnam with a strong salesforce in Japan.',
-            'Tung is helping PolkaFoundry to expand its ecosystem and form partnerships with key players in the Japanese market. Rikkeisoft also provides PolkaFoundry with talented developers whenever needed.'
-          ],
-          shortcut: 'Co-founder and executive chairman of RikkeiSoft, one of the largest software companies in Vietnam...'
-        },
-        {
-          name: 'Eric Su',
-          title: 'CEO of Exnetwork',
-          image: 'eric.png',
-          links: [{href: 'https://www.linkedin.com/in/ericsu', img: 'linkedin.svg'}],
-          descriptions: [
-            'Eric is one of PolkaFoundry’s highly value advisors, bringing immense expertise as an accomplished serial entrepreneur in markets of key strategic importance.',
-            'Exnetwork also has direct investment ties with the Polkadot multi-chain. The company’s portfolio includes cross-chain token launchpad Polkastarter and liquidity aggregator Reef Finance — a Polkadot pioneer as the first parachain on Binance. Hence, we relished the opportunity to take into account Eric’s views on the role of PolkaFoundry in the development of DeFi dApps for an interoperable future.'
-          ],
-          shortcut: 'For our latest Advisor Spotlight, we are delighted to highlight Eric Su, CEO of Exnetwork...'
-        },
-        {
-          name: 'Joe Wong',
-          title: 'Advisor',
-          image: 'joe.png',
-          links: [{href: 'https://twitter.com/khunjoe5', img: 'twitter.svg'}],
-          descriptions: [
-            'Principal of Fomocraft Ventures & seasoned market of 23 years. CMO and Advisor for MANTRA DAO, Launchpool, FinNexus, Polkastarter and Royale.finance.',
-            'Joe is a master of ensuring that a project\'s vision is faithfully executed & communicated to the community.'
-          ],
-          shortcut: 'Principal of Fomocraft Ventures & seasoned marketer of 23 years...'
+              'A driven front-end developer with 8 years of experience.',
+              'Hoa has consolidated experience in the context of experimental and real-world deployments concentrating primarily on HTML, CSS, JavaScript, JQuery, Angular JS, XML, and Bootstrap. He is proficient in developing responsive front-end solutions, providing personalized experience to users, and reducing the workload on the back-end.'
+          ]
         },
       ]
     }
@@ -157,7 +113,7 @@ export default {
 
 <style scoped>
 .wrapper {
-  padding: var(--padding-article) 100px;;
+  padding: var(--padding-section);
   position: relative;
   background: #0A0A0A;
 }
@@ -178,11 +134,16 @@ h1.title {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
 }
 
 .member {
   position: relative;
+}
+
+.member img {
+  width: 100%;
 }
 
 .member:after {

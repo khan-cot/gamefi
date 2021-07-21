@@ -62,7 +62,7 @@ export default {
 <style scoped>
   .partners {
     background: #0A0A0A;
-    padding: var(--padding-article) var(--padding-section);
+    padding: var(--padding-article) var(--padding-section) 240px;
   }
 
   h2.title {

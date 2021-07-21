@@ -130,7 +130,7 @@ export default {
 
 <style scoped>
 .wrapper {
-  padding: var(--padding-section);
+  padding: 40px var(--padding-section) var(--padding-section);
   position: relative;
   background: #0A0A0A;
 }
@@ -146,7 +146,6 @@ h1.title {
   font-size: 32px;
   line-height: 40px;
   text-transform: uppercase;
-  margin-bottom: 120px;
 }
 
 .grid {

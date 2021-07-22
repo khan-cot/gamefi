@@ -12,6 +12,17 @@
         </div>
       </div>
     </div>
+    <h1 class="title advisor">Advisors</h1>
+    <div class="grid">
+      <div v-for="(member, i) in members" :key="i"
+           class="member" @click.stop="openDialog(member, i)">
+        <img alt :src="`members/${member.image}`"/>
+        <div class="member-info">
+          <div class="info-name">{{ member.name }}</div>
+          <div class="info-title">{{ member.title }}</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -143,6 +154,12 @@ h1.title {
   font-size: 32px;
   line-height: 40px;
   text-transform: uppercase;
+}
+
+h1.title.advisor {
+  background: url("../assets/advisor.png");
+  background-size: cover;
+  margin-top: 120px;
 }
 
 .grid {

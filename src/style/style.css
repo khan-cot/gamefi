@@ -24,3 +24,34 @@ body {
 img {
     max-width: 100%;
 }
+
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    will-change: opacity, transform;
+    transition: 0.8s;
+}
+
+.slideLeft {
+    transform: translateX(-50vw) skewX(15deg);
+    will-change: transform;
+    transition: 0.8s;
+}
+
+.slideRight {
+    transform: translateX(50vw) skewX(-15deg);
+    will-change: transform;
+    transition: 0.8s;
+}
+
+.delay {
+    transition-delay: 0.4s;
+}
+
+.active,
+.active > .slideLeft,
+.active > .slideRight {
+    transform: none !important;
+    opacity: 1 !important;
+}
+

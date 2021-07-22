@@ -1,20 +1,8 @@
 <template>
   <div class="partners">
-    <h2 class="title">
-      Proudly Supported By
-    </h2>
-    <div class="row">
-      <div class="item">
-        <a href="https://icetea.io/" target="_blank">
-          <img alt="icetea labs" src="../assets/icetea.png"/>
-        </a>
-      </div>
-      <div class="item">
-        <a href="https://daomaker.com/" target="_blank">
-          <img alt="dao maker" src="../assets/dao_maker.png"/>
-        </a>
-      </div>
-    </div>
+    <h1 class="title">
+      Partners
+    </h1>
     <h2 class="title">
       Game Partners
     </h2>
@@ -65,12 +53,28 @@ export default {
     padding: var(--padding-article) var(--padding-section) 240px;
   }
 
+  h1.title {
+    background: url("../assets/partner.png");
+    background-size: cover;
+    aspect-ratio: 1440/231;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+  }
+
   h2.title {
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
     color: var(--primary);
-    margin-bottom: 24px;
+    margin-bottom: 32px;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   h2.title:not(:first-child) {
@@ -80,6 +84,7 @@ export default {
   .row {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   .item {

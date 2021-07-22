@@ -2,20 +2,15 @@
   <div class="banner">
     <div class="banner-background">
       <h1 class="banner-title">
-        <p style="margin-bottom: 4px">The first game</p>
-        <TextSwap/>
-        <p>on Polygon</p>
-      </h1>
-      <div class="banner-btn primary" @click="scroll">Discover</div>
-    </div>
-    <div class="intro" id="intro">
-      <div class="intro-title">
         <div>Play, Trade & Farm</div>
         <div>Any Blockchain Game</div>
-      </div>
-      <div class="intro-subtitle">
+      </h1>
+      <div class="banner-subtitle">
         GameFi is the all-encompassing hub for game finance. The platform services blockchain gamers, investors, and traders in one aggregator.
       </div>
+      <div class="banner-btn primary" @click="scroll">Discover</div>
+    </div>
+    <div class="intro" id="parallax">
       <div class="intro-row">
         <div class="intro-item">
           <img alt src="../assets/rocket.svg"/>
@@ -49,10 +44,18 @@
 </template>
 
 <script>
-import TextSwap from "@/components/TextSwap";
 export default {
   name: "Banner",
-  components: {TextSwap},
+  components: {},
+  mounted() {
+    function parallax() {
+      let yScrollPosition = window.pageYOffset;
+      const el = document.getElementById('parallax');
+      el.style.bottom = (200 + yScrollPosition * 0.2) + 'px'
+      requestAnimationFrame(parallax);
+    }
+    parallax();
+  },
   methods: {
     scroll() {
       const el = document.getElementById('intro')
@@ -76,13 +79,29 @@ export default {
     align-items: center;
   }
 
-  h1.banner-title {
+  .banner-title {
     margin-top: 240px;
     font-family: "Space Ranger";
-    font-weight: 700;
-    font-size: 90px;
-    line-height: 80px;
+    font-size: 88px;
+    line-height: 78px;
     text-align: center;
+    width: 1100px;
+  }
+
+  .banner-title div:first-child {
+    font-weight: 700;
+  }
+
+  .banner-title div:last-child {
+    font-weight: 400;
+  }
+
+  .banner-subtitle {
+    font-size: 22px;
+    line-height: 32px;
+    margin-top: 20px;
+    text-align: center;
+    width: 970px;
   }
 
   .banner-btn {
@@ -100,20 +119,6 @@ export default {
     transform: translateY(100%);
     background: #171717;
     padding: 80px;
-  }
-
-  .intro-title {
-    font-size: 60px;
-    line-height: 52px;
-    font-weight: 700;
-  }
-
-  .intro-subtitle {
-    font-size: 22px;
-    line-height: 32px;
-    color: #D1D1D1;
-    margin-top: 20px;
-    margin-bottom: 40px;
   }
 
   .intro-row {

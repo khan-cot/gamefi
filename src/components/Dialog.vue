@@ -138,13 +138,6 @@ export default {
     position: relative;
   }
 
-  .image:after {
-    content: '';
-    position: absolute;
-    inset: 20px -20px -20px 20px;
-    border: 1px solid var(--primary);
-  }
-
   .image img {
     width: 100%;
   }

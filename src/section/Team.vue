@@ -6,9 +6,6 @@
       <div v-for="(member, i) in members" :key="i"
            class="member" @click.stop="openDialog(member, i)">
         <img alt :src="`members/${member.image}`"/>
-        <div class="info">
-          <div class="info-btn">Discover</div>
-        </div>
         <div class="member-info">
           <div class="info-name">{{ member.name }}</div>
           <div class="info-title">{{ member.title }}</div>
@@ -130,7 +127,7 @@ export default {
 
 <style scoped>
 .wrapper {
-  padding: 40px var(--padding-section) var(--padding-section);
+  padding: 40px 0 var(--padding-section);
   position: relative;
   background: #0A0A0A;
 }
@@ -149,6 +146,7 @@ h1.title {
 }
 
 .grid {
+  padding: 0 var(--padding-section);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
@@ -156,91 +154,55 @@ h1.title {
 
 .member {
   position: relative;
+  padding: 32px 4px 24px;
+  cursor: pointer;
 }
 
 .member img {
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
-.member:after {
+.member:before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 100%;
-  background: #6BE04766;
+  background: var(--primary);
   transition: bottom 0.5s;
 }
 
-.member:hover:after {
+.member:hover:before {
   bottom: 0;
 }
 
-.member:hover .info {
-  opacity: 1;
-}
-
-.info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  padding: 7%;
-  opacity: 0;
-  transition: opacity 0.5s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.member-info {
+  position: relative;
+  z-index: 1;
+  margin: 22px 6px 4px;
 }
 
 .info-name {
   font-weight: bold;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 36px;
   margin-bottom: 4px;
 }
 
 .info-title {
   font-weight: 600;
-  font-size: 16px;
-  line-height: 28px;
-  margin-bottom: 8px;
-}
-
-.info-btn {
-  padding: 16px 80px;
-  cursor: pointer;
-  background: #0A0A0A;
+  font-size: 14px;
+  line-height: 24px;
   color: var(--primary);
 }
 
-.info-shortcut span {
-  margin-left: 4px;
-  color: #0DDDFB;
-  cursor: pointer;
-}
-
-.info-link {
-  display: flex;
-  align-items: center;
-  margin-top: 4px;
-}
-
-.member-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 4%;
+.member:hover .info-name,
+.member:hover .info-title {
+  transition: 0.5s;
   color: #0A0A0A;
-  background: linear-gradient(180deg, rgba(114, 243, 75, 0) 0%, #72F34B 78.65%);
-}
-
-.member:hover .member-info {
-  display: none;
 }
 
 @media screen and (max-width: 600px) {

@@ -58,7 +58,7 @@ export default {
   methods: {
     goTo(item, mode) {
       if(mode === 'scroll') {
-        const id = item.toLowerCase().trim()
+        const id = item.toLowerCase().replace(' ', '');
         const el = document.getElementById(id)
         el.scrollIntoView({behavior: 'smooth'})
       } else if (mode === 'open') {

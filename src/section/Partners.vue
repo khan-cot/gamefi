@@ -7,17 +7,17 @@
       Game Partners
     </h2>
     <div class="row">
-      <div class="item">
+      <div class="item invert">
         <a href="https://stephero.io/" target="_blank">
           <img alt="step hero" src="../assets/step_hero.png"/>
         </a>
       </div>
-      <div class="item">
+      <div class="item invert">
         <a href="https://kabyarena.com/" target="_blank">
           <img alt="kaby arena" src="../assets/kaby_arena.png"/>
         </a>
       </div>
-      <div class="item">
+      <div class="item invert">
         <a href="https://faraland.io/" target="_blank">
           <img alt="fara land" src="../assets/faraland.png"/>
         </a>
@@ -27,12 +27,12 @@
       Media Partners
     </h2>
     <div class="row">
-      <div class="item">
+      <div class="item invert">
         <a href="https://rarestone.capital/" target="_blank">
           <img alt="rare stone" src="../assets/rarestone.png"/>
         </a>
       </div>
-      <div class="item">
+      <div class="item invert">
         <a href="https://coinmarketcap.com/" target="_blank">
           <img alt="coin market cap" src="../assets/coin_market_cap.png"/>
         </a>

@@ -32,6 +32,14 @@ img {
     transition: 0.8s;
 }
 
+.fade:nth-child(3n+2) {
+    transition-delay: 0.2s;
+}
+
+.fade:nth-child(3n) {
+    transition-delay: 0.4s;
+}
+
 .slideLeft {
     transform: translateX(-50vw) skewX(15deg);
     will-change: transform;
@@ -55,3 +63,10 @@ img {
     opacity: 1 !important;
 }
 
+.invert img{
+    filter: grayscale(100%) invert(0.2);
+}
+
+.invert:hover img{
+    filter: none;
+}

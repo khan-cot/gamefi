@@ -30,14 +30,14 @@
       GameFi Supported
     </h1>
     <div class="info">
-      <div class="item mr">
+      <div class="item mr bg-black invert">
         <a href="https://icetea.io/" target="_blank">
           <img alt="icetea labs" src="../assets/icetea.png"/>
         </a>
       </div>
-      <div class="item">
+      <div class="item bg-black invert">
         <a href="https://daomaker.com/" target="_blank">
-          <img alt="dao maker" src="../assets/dao_maker.png"/>
+          <img style="width: 360px" alt="dao maker" src="../assets/dao_maker.png"/>
         </a>
       </div>
     </div>
@@ -79,6 +79,9 @@ h1.title {
 
 .item {
   position: relative;
+}
+
+.bg-black {
   background: #0A0A0A;
 }
 

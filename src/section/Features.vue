@@ -176,6 +176,11 @@ export default {
   position: absolute;
   bottom: -20px;
   right: -20px;
+  width: calc(100% - 820px);
+}
+
+.fee-image img {
+  width: 100%;
 }
 
 .fee-image:after {

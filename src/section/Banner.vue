@@ -9,10 +9,12 @@
         GameFi is the all-encompassing hub for game finance. The platform services blockchain gamers, investors, and traders in one aggregator.
       </div>
       <div class="banner-btn primary" @click="scroll">Discover</div>
+      <img alt id="xbox" src="../assets/xbox-controller.png"/>
+      <img alt id="ps5" src="../assets/ps5-controller.png"/>
     </div>
     <div class="intro" id="parallax">
       <div class="intro-row">
-        <div class="intro-item">
+        <div class="intro-item fade">
           <img alt src="../assets/rocket.svg"/>
           <div class="intro-item_title">For Game Projects</div>
           <ul class="intro-item_detail">
@@ -21,7 +23,7 @@
             <li>Acquire early users</li>
           </ul>
         </div>
-        <div class="intro-item">
+        <div class="intro-item fade">
           <img alt src="../assets/diamond.svg"/>
           <div class="intro-item_title">For Investors</div>
           <ul class="intro-item_detail">
@@ -29,7 +31,7 @@
             <li>Earning by staking, re-selling and renting out NFTs</li>
           </ul>
         </div>
-        <div class="intro-item">
+        <div class="intro-item fade">
           <img alt src="../assets/gamepad.svg"/>
           <div class="intro-item_title">For Game Players</div>
           <ul class="intro-item_detail">
@@ -52,6 +54,10 @@ export default {
       let yScrollPosition = window.pageYOffset;
       const el = document.getElementById('parallax');
       el.style.bottom = (200 + yScrollPosition * 0.2) + 'px'
+      const xbox = document.getElementById('xbox')
+      xbox.style.transform = `rotate(${-yScrollPosition * 0.1}deg)`;
+      const ps5 = document.getElementById('ps5')
+      ps5.style.transform = `rotate(${yScrollPosition * 0.05}deg)`;
       requestAnimationFrame(parallax);
     }
     parallax();
@@ -77,6 +83,12 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+  }
+
+  .banner-background *:not(img) {
+    position: relative;
+    z-index: 1;
   }
 
   .banner-title {
@@ -109,6 +121,18 @@ export default {
     padding: 16px 80px;
     margin-top: 40px;
     cursor: pointer;
+  }
+
+  #xbox {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+  }
+
+  #ps5 {
+    position: absolute;
+    right: -160px;
+    bottom: 200px;
   }
 
   .intro {

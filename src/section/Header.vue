@@ -18,7 +18,7 @@ export default {
   name: "Header",
   data() {
     return {
-      items: ['Features', 'Roadmap', 'Our Team'],
+      items: ['Features', 'Roadmap', 'Our Team', 'Advisors'],
       show: false
     }
   },

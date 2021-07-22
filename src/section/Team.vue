@@ -12,9 +12,9 @@
         </div>
       </div>
     </div>
-    <h1 class="title advisor">Advisors</h1>
+    <h1 class="title advisor" id="advisors">Advisors</h1>
     <div class="grid">
-      <div v-for="(member, i) in members" :key="i"
+      <div v-for="(member, i) in advisors" :key="i"
            class="member" @click.stop="openDialog(member, i)">
         <img alt :src="`members/${member.image}`"/>
         <div class="member-info">
@@ -39,74 +39,97 @@ export default {
       index: 0,
       members: [
         {
-          name: 'Thi Truong',
-          title: 'Executive Advisor',
-          image: 'member.png',
-          links: [{href: 'https://www.linkedin.com/in/mangcut/', img: 'linkedin.svg'}],
-          descriptions: [
-            'Founder and CEO of PolkaFoundry and Red Kite; incubator of Faraland and KabyArena.',
-            'Mr. Thi has been a blockchain soldier with hands-on, in-depth expertise in the blockchain area for many years. He started as a Solution Architect, then a Director at FPT, Vietnam\'s biggest IT company. He is the former Product Manager in Kyber Network, one of Asia’s most successful blockchain projects, before founding PolkaFoundry in 2018.',
-          ],
-        },
-        {
           name: 'My Nguyen',
           title: 'Head of Marketing & Operation',
           image: 'member.png',
           // links: [{href: '', img: 'linkedin.svg'}],
           descriptions: [
-            'Ms. My owns 5+ years experience in Corporate Communications at SmartOSC, a premium ecommerce agency with more than 500 clients around the world. In line with her passion for technologies, My later co-founded and undertook the Executive Director position in JunctionxHaNoi, Vietnam’s first hackathon in 2019.',
-          ],
-        },
-        {
-          name: 'Linh Do',
-          title: 'QA Lead',
-          image: 'member.png',
-          links: [{href: 'https://www.linkedin.com/in/linh-do-29b95a27/', img: 'linkedin.svg'}],
-          descriptions: [
-            'Holder of HDSE (Higher Diploma in Software Engineering) with 10 years of experience in QA.',
-            'Ms. Linh has a demonstrated history of working as SQA Engineer for renowned global corporations including Optimizely, a platform that provides digital experience solutions to Microsoft, IBM and Ebay. As a QA Lead, she not only shows exceptional technical knowledge and analytical skills but also proves to be a supported spirit leader.'
+              'My owns 5+ years of experience in Corporate Communications at SmartOSC, a premium e-commerce agency with more than 500 clients around the world.',
+              'She was also a co-founder and Executive Director in JunctionxHaNoi, Vietnam’s first hackathon.'
           ],
         },
         {
           name: 'Hai Duong',
-          title: 'Tech Lead',
+          title: 'Head of Technology',
           image: 'member.png',
           links: [{href: 'https://www.linkedin.com/in/haicon2321993', img: 'linkedin.svg'}],
           descriptions: [
-            'Former Director Of Product Development in CyRadar, Top 20 Cyber Security Innovators in 2019 ranked by US magazine Technology Innovation.',
-            'Prior to joining GameFi, Hai has 7 years of experience in the development and maintenance of large-scale products in first-tier technology companies, FPT Corp and CyRadar. He is good at leading the tech team building products from 0 to 1 and achieving rapid growth.'
-          ],
-        },
-        {
-          name: 'Thanh Tung',
-          title: 'Blockchain Developer',
-          image: 'member.png',
-          links: [{href: 'https://www.linkedin.com/in/thanh-tung-a87262142/', img: 'linkedin.svg'}],
-          descriptions: [
-            'A Fullstack Developer with 5+ years of broad experience in JavaScript/ES6 & NodeJs & ReactJs/React Native.',
-            'Mr. Tung is a crypto enthusiast and shows a high level of knowledge and skills in Blockchain, Rust, and Solidity languages. Tung has previously been one of the core developers in some blockchain-based projects such as PolkaFoundry and Red Kite launchpad.'
+              'Hai is the former Director Of Product Development in CyRadar, Top 20 Cyber Security Innovators in 2019 ranked Technology Innovation magazine.',
+              'He has 7 years of experience in the development and maintenance of large-scale products.'
           ],
         },
         {
           name: 'Hieu Ha',
-          title: 'Senior Penetration Tester',
+          title: 'Head of Security',
           image: 'member.png',
           links: [{href: 'https://www.linkedin.com/in/hieuhatrung/', img: 'linkedin.svg'}],
           descriptions: [
-              'A penetration test expert/coach with more than 12,000 followers.',
-              'Hieu devotes to performing penetration testing, security auditing, and vulnerability assessments following OWASP, PTES Framework standards. He has 5+ years of experience working with web applications and web API, Android & iOS applications, IoT devices, network devices, Windows, Linux, and Unix Servers.'
+              'Hieu has 5+ years of experience performing penetration testing, security auditing, and vulnerability assessments following OWASP, PTES Framework standards.',
+              'He is a renowned penetration test expert/ coach with more than 12,000 followers.'
           ]
         },
         {
-          name: 'Thanh Hoa',
-          title: 'Front-end Developer',
+          name: 'Linh Do',
+          title: 'Head of Quality',
           image: 'member.png',
-          links: [{href: 'https://www.linkedin.com/in/hoa-lee/', img: 'linkedin.svg'}],
+          links: [{href: 'https://www.linkedin.com/in/linh-do-29b95a27/', img: 'linkedin.svg'}],
           descriptions: [
-              'A driven front-end developer with 8 years of experience.',
-              'Hoa has consolidated experience in the context of experimental and real-world deployments concentrating primarily on HTML, CSS, JavaScript, JQuery, Angular JS, XML, and Bootstrap. He is proficient in developing responsive front-end solutions, providing personalized experience to users, and reducing the workload on the back-end.'
+            'Linh is the holder of HDSE (Higher Diploma in Software Engineering) with 10 years of experience in quality assurance.',
+            'She used to work for Optimizely to provide digital experience solutions to Microsoft and eBay.'
+          ],
+        },
+        {
+          name: 'Hong',
+          title: 'BA',
+          image: 'member.png',
+          // links: [{href: 'https://www.linkedin.com/in/hoa-lee/', img: 'linkedin.svg'}],
+          descriptions: [
+              'Hong has years of experience as a business analyst for outsourcing and blockchain projects before joining the GameFi team.',
+              'She can speak and write in different languages, French, English and Japanese.'
           ]
         },
+        {
+          name: 'Ha',
+          title: 'Designer',
+          image: 'member.png',
+          // links: [{href: 'https://www.linkedin.com/in/hoa-lee/', img: 'linkedin.svg'}],
+          descriptions: [
+            'Ha is an all-rounded graphic designer with 5 years in various industries such as brand design, illustration, UI design, UX consultant.',
+            'Her expertise is creating user experience solutions in high-technology websites or mobile apps.'
+          ]
+        },
+        {
+          name: 'Hoang',
+          title: 'Developer',
+          image: 'member.png',
+          // links: [{href: 'https://www.linkedin.com/in/thanh-tung-a87262142/', img: 'linkedin.svg'}],
+          descriptions: [
+            'Hoang is a driven developer with 4 years of broad experience in software development and 2 years in the blockchain area.',
+            'Hoang is a crypto enthusiast and shows a high level of knowledge and skills in Blockchain.'
+          ],
+        },
+      ],
+      advisors: [
+        {
+          name: 'Thi Truong',
+          title: 'Executive Advisor',
+          image: 'member.png',
+          links: [{href: 'https://www.linkedin.com/in/mangcut/', img: 'linkedin.svg'}],
+          descriptions: [
+            'Thi is the founder of PolkaFoundry. He is also the incubator of a couple of blockchain projects such as Faraland game, Bunicorn exchange, etc.',
+            'Before founding PolkaFoundry, Thi worked for Kyber Network and FPT Software.',
+          ],
+        },
+        {
+          name: 'Hatu',
+          title: 'Advisor',
+          image: 'member.png',
+          // links: [],/
+          descriptions: [
+              'Hatu is the co-founder, chief marketing, and strategy in Dao Maker. He defines himself as an analyst with the business intuition necessary to analyze opportunities for growth.',
+              'Before co-founding Dao Maker, he had years of experience in analytical roles, marketing, management, and entrepreneurial ventures.'
+          ]
+        }
       ]
     }
   },
@@ -117,20 +140,32 @@ export default {
       this.dialog = true
     },
     next() {
+      let list = []
+      if(this.members.findIndex(p => p.name === this.person.name) !== -1) {
+        list = this.members
+      } else {
+        list = this.advisors
+      }
       let index = this.index + 1
-      if(this.index === this.members.length -1) {
+      if (this.index === list.length - 1) {
         index = 0
       }
-      this.person = this.members[index]
+      this.person = list[index]
       this.index = index
     },
     prev() {
-      if(this.index === 0) {
-        this.index = this.members.length - 1
+      let list = []
+      if(this.members.findIndex(p => p.name === this.person.name) !== -1) {
+        list = this.members
+      } else {
+        list = this.advisors
+      }
+      if (this.index === 0) {
+        this.index = list.length - 1
       } else {
         this.index--
       }
-      this.person = this.members[this.index]
+      this.person = list[this.index]
     },
   }
 }

@@ -67,7 +67,6 @@ export default {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 100px 60px;
     padding: 24px var(--padding-section) var(--padding-section);
-    background: #171717;
   }
 
   .item:nth-child(3n) {

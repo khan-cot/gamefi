@@ -221,14 +221,14 @@ h1.title {
 .info-name {
   font-weight: bold;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 32px;
   margin-bottom: 4px;
 }
 
 .info-title {
-  font-weight: 600;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 16px;
+  margin-bottom: 4px;
   color: var(--primary);
 }
 

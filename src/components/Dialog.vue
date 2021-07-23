@@ -3,9 +3,9 @@
     <div v-show="value" class="overlay" @click="close"></div>
     <transition name="fade">
       <div v-show="value" class="main" ref="main">
-        <img class="close" alt src="src/assets/close2.svg" @click="close"/>
-        <img class="right" alt src="src/assets/arrow_right.svg" @click="next"/>
-        <img class="left" alt src="src/assets/arrow_left.svg" @click="prev"/>
+        <img class="close" alt src="../assets/close2.svg" @click="close"/>
+        <img class="right" alt src="../assets/arrow_right.svg" @click="next"/>
+        <img class="left" alt src="../assets/arrow_left.svg" @click="prev"/>
         <div class="image">
           <img alt :src="image"/>
         </div>
@@ -39,7 +39,7 @@ export default {
   },
   computed: {
     image() {
-      return 'members/' + this.data?.image[1] || 'thi.png'
+      return 'members/' + this.data?.image[window.innerWidth < 600 ? 1 : 0] || 'thi.png'
     },
     name() {
       return this.data?.name || ''
@@ -101,7 +101,7 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #303030;
+    background: #1C1C1E;
     padding: 60px 80px;
     border-radius: 20px;
     display: flex;
@@ -193,6 +193,7 @@ export default {
       max-height: calc(100% - 24px);
       overflow: scroll;
       padding: 24px;
+      background: #303030;
     }
 
     .image {

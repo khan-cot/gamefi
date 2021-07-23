@@ -69,7 +69,9 @@ export default {
 
 <style scoped>
 .subscribe {
-  background: var(--primary);
+  background-color: var(--primary);
+  background-image: url("../assets/subscribe.png");
+  background-size: cover;
   position: relative;
   padding: 80px 0 40px;
   display: flex;
@@ -142,8 +144,12 @@ input {
 
 @media screen and (max-width: 600px) {
   .subscribe {
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100%;
+    padding: 60px 24px;
+    background-image: url("../assets/subscribe_mb.png");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .subscribe > img {
@@ -152,18 +158,25 @@ input {
     width: 120px;
   }
 
+  h3.title {
+    font-size: 52px;
+    line-height: 38px;
+  }
+
   .input-wrapper {
     flex-direction: column;
     background: transparent;
     align-items: stretch;
     box-shadow: none;
+    width: 100%;
   }
 
   input {
-    border-radius: 60px;
-    margin-bottom: 12px;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 8px;
   }
 
+  .social {
+    display: none;
+  }
 }
 </style>

@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="fees">
-      <h1 class="fee-title">Ecosystem Fees</h1>
+      <h1 class="fee-title"><span>Ecosystem</span> Fees</h1>
       <div class="fee-list">
         <div class="fee-item">
           <div>Trading Fees</div>
@@ -190,4 +190,79 @@ export default {
   border: 1px solid var(--primary);
 }
 
+@media screen and (max-width: 600px) {
+  .features-title {
+    background: url("../assets/features_mb.png");
+    background-size: cover;
+    aspect-ratio: 375/100;
+  }
+
+  .features-title h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .features-title div {
+    display: none;
+  }
+
+  .feature-grid {
+    display: block;
+    padding: 0;
+  }
+
+  .feature-grid .feature-item {
+    transition-delay: 0s;
+  }
+
+  .feature-item {
+    padding: 40px;
+  }
+
+  .feature-item .title {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 12px 0 8px;
+  }
+
+  .feature-item .detail {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .fees {
+    margin-right: 0;
+    padding: 40px;
+  }
+
+  .fee-title {
+    font-size: 110px;
+    line-height: 65px;
+  }
+
+  .fee-title span {
+    font-size: 36px;
+    line-height: 30px;
+  }
+
+  .fee-item {
+    width: 100%;
+    display: block;
+  }
+
+  .fee-item > div:first-child {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .fee-item > div:last-child {
+    margin-left: 0px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .fee-image {
+    display: none;
+  }
+}
 </style>

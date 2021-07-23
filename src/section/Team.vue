@@ -5,18 +5,8 @@
     <div class="grid">
       <div v-for="(member, i) in members" :key="i"
            class="member" @click.stop="openDialog(member, i)">
-        <img alt :src="`members/${member.image}`"/>
-        <div class="member-info">
-          <div class="info-name">{{ member.name }}</div>
-          <div class="info-title">{{ member.title }}</div>
-        </div>
-      </div>
-    </div>
-    <h1 class="title advisor" id="advisors">Advisors</h1>
-    <div class="grid">
-      <div v-for="(member, i) in advisors" :key="i"
-           class="member" @click.stop="openDialog(member, i)">
-        <img alt :src="`members/${member.image}`"/>
+        <img alt :src="`members/${member.image[0]}`"/>
+        <img class="hover" :src="`members/${member.image[1]}`"/>
         <div class="member-info">
           <div class="info-name">{{ member.name }}</div>
           <div class="info-title">{{ member.title }}</div>
@@ -41,7 +31,7 @@ export default {
         {
           name: 'My Nguyen',
           title: 'Head of Marketing & Operation',
-          image: 'member.png',
+          image: ['my.png', 'my2.png'],
           // links: [{href: '', img: 'linkedin.svg'}],
           descriptions: [
               'My owns 5+ years of experience in Corporate Communications at SmartOSC, a premium e-commerce agency with more than 500 clients around the world.',
@@ -51,7 +41,7 @@ export default {
         {
           name: 'Hai Duong',
           title: 'Head of Technology',
-          image: 'member.png',
+          image: ['hai.png', 'hai2.png'],
           links: [{href: 'https://www.linkedin.com/in/haicon2321993', img: 'linkedin.svg'}],
           descriptions: [
               'Hai is the former Director Of Product Development in CyRadar, Top 20 Cyber Security Innovators in 2019 ranked Technology Innovation magazine.',
@@ -61,7 +51,7 @@ export default {
         {
           name: 'Hieu Ha',
           title: 'Head of Security',
-          image: 'member.png',
+          image: ['hieu.png', 'hieu2.png'],
           links: [{href: 'https://www.linkedin.com/in/hieuhatrung/', img: 'linkedin.svg'}],
           descriptions: [
               'Hieu has 5+ years of experience performing penetration testing, security auditing, and vulnerability assessments following OWASP, PTES Framework standards.',
@@ -71,7 +61,7 @@ export default {
         {
           name: 'Linh Do',
           title: 'Head of Quality',
-          image: 'member.png',
+          image: ['linh.png', 'linh2.png'],
           links: [{href: 'https://www.linkedin.com/in/linh-do-29b95a27/', img: 'linkedin.svg'}],
           descriptions: [
             'Linh is the holder of HDSE (Higher Diploma in Software Engineering) with 10 years of experience in quality assurance.',
@@ -79,9 +69,9 @@ export default {
           ],
         },
         {
-          name: 'Hong',
-          title: 'BA',
-          image: 'member.png',
+          name: 'Hong Dinh',
+          title: 'Business Analyst',
+          image: ['hong.png', 'hong2.png'],
           // links: [{href: 'https://www.linkedin.com/in/hoa-lee/', img: 'linkedin.svg'}],
           descriptions: [
               'Hong has years of experience as a business analyst for outsourcing and blockchain projects before joining the GameFi team.',
@@ -89,9 +79,9 @@ export default {
           ]
         },
         {
-          name: 'Ha',
+          name: 'Ha Thanh',
           title: 'Designer',
-          image: 'member.png',
+          image: ['ha.png', 'ha2.png'],
           // links: [{href: 'https://www.linkedin.com/in/hoa-lee/', img: 'linkedin.svg'}],
           descriptions: [
             'Ha is an all-rounded graphic designer with 5 years in various industries such as brand design, illustration, UI design, UX consultant.',
@@ -99,38 +89,47 @@ export default {
           ]
         },
         {
-          name: 'Hoang',
+          name: 'Hoang Le',
           title: 'Developer',
-          image: 'member.png',
+          image: ['hoang.png', 'hoang2.png'],
           // links: [{href: 'https://www.linkedin.com/in/thanh-tung-a87262142/', img: 'linkedin.svg'}],
           descriptions: [
             'Hoang is a driven developer with 4 years of broad experience in software development and 2 years in the blockchain area.',
             'Hoang is a crypto enthusiast and shows a high level of knowledge and skills in Blockchain.'
           ],
         },
-      ],
-      advisors: [
+        {
+          name: 'Hoa Thanh',
+          title: 'Developer',
+          image: ['hoa.png', 'hoa2.png'],
+          links: [{href: 'https://www.linkedin.com/in/hoa-lee/', img: 'linkedin.svg'}],
+          descriptions: [
+            'Hoa has 8 years of consolidated experience in the context of both experimental and real-world large-scale deployments.',
+            'He was the research team manager at Bkav, a leading security software company in Vietnam.'
+          ],
+        },
         {
           name: 'Thi Truong',
-          title: 'Executive Advisor',
-          image: 'member.png',
+          title: 'Advisor',
+          image: ['thi.png', 'thi2.png'],
           links: [{href: 'https://www.linkedin.com/in/mangcut/', img: 'linkedin.svg'}],
           descriptions: [
-            'Thi is the founder of PolkaFoundry. He is also the incubator of a couple of blockchain projects such as Faraland game, Bunicorn exchange, etc.',
-            'Before founding PolkaFoundry, Thi worked for Kyber Network and FPT Software.',
+            'Thi is the founder of Icetea Labs. He is also the incubator of a couple of blockchain projects such as Faraland game, Bunicorn exchange, etc.',
+            'Before founding Icetea Labs, Thi worked for Kyber Network and FPT Software.',
           ],
         },
         {
           name: 'Hatu',
           title: 'Advisor',
-          image: 'member.png',
+          image: ['hatu.png', 'hatu2.png'],
           // links: [],/
           descriptions: [
-              'Hatu is the co-founder, chief marketing, and strategy in Dao Maker. He defines himself as an analyst with the business intuition necessary to analyze opportunities for growth.',
-              'Before co-founding Dao Maker, he had years of experience in analytical roles, marketing, management, and entrepreneurial ventures.'
+            'Hatu is the co-founder, chief marketing, and strategy in Dao Maker. He defines himself as an analyst with the business intuition necessary to analyze opportunities for growth.',
+            'Before co-founding Dao Maker, he had years of experience in analytical roles, marketing, management, and entrepreneurial ventures.'
           ]
         }
-      ]
+
+      ],
     }
   },
   methods: {
@@ -140,32 +139,20 @@ export default {
       this.dialog = true
     },
     next() {
-      let list = []
-      if(this.members.findIndex(p => p.name === this.person.name) !== -1) {
-        list = this.members
-      } else {
-        list = this.advisors
-      }
       let index = this.index + 1
-      if (this.index === list.length - 1) {
+      if (this.index === this.members.length - 1) {
         index = 0
       }
-      this.person = list[index]
+      this.person = this.members[index]
       this.index = index
     },
     prev() {
-      let list = []
-      if(this.members.findIndex(p => p.name === this.person.name) !== -1) {
-        list = this.members
-      } else {
-        list = this.advisors
-      }
       if (this.index === 0) {
-        this.index = list.length - 1
+        this.index = this.members.length - 1
       } else {
         this.index--
       }
-      this.person = list[this.index]
+      this.person = this.members[this.index]
     },
   }
 }
@@ -191,12 +178,6 @@ h1.title {
   text-transform: uppercase;
 }
 
-h1.title.advisor {
-  background: url("../assets/advisor.png");
-  background-size: cover;
-  margin-top: 120px;
-}
-
 .grid {
   padding: 0 var(--padding-section);
   display: grid;
@@ -206,8 +187,8 @@ h1.title.advisor {
 
 .member {
   position: relative;
-  padding: 32px 4px 24px;
   cursor: pointer;
+  background: #1C1C1E;
 }
 
 .member img {
@@ -216,23 +197,23 @@ h1.title.advisor {
   z-index: 1;
 }
 
-.member:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 100%;
-  background: var(--primary);
-  transition: bottom 0.5s;
+.member .hover {
+  display: none;
 }
 
-.member:hover:before {
-  bottom: 0;
+.member:hover img:not(.hover) {
+  display: none;
+}
+
+.member:hover .hover {
+  display: block;
 }
 
 .member-info {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 1;
   margin: 22px 6px 4px;
 }
@@ -254,13 +235,26 @@ h1.title.advisor {
 .member:hover .info-name,
 .member:hover .info-title {
   transition: 0.5s;
-  color: #0A0A0A;
 }
 
 @media screen and (max-width: 600px) {
+  .wrapper {
+    padding-bottom: 120px;
+  }
   .grid {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 12px;
+    grid-gap: 4px;
+  }
+
+  .info-name {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .info-title {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300;
   }
 }
 </style>

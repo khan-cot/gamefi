@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Hanken Grotesk";
+    font-family: "Firs Neue";
     font-size: 16px;
     background: #171717;
     color: White;
@@ -69,4 +69,19 @@ img {
 
 .invert:hover img{
     filter: none;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --padding-section: 24px;
+        --padding-article: 20px;
+    }
+
+    .invert img {
+        filter: none;
+    }
 }

@@ -2,7 +2,7 @@
   <div class="banner">
     <div class="banner-background">
       <h1 class="banner-title">
-        <div>Play, Trade & Farm</div>
+        <div>Play, Trade & Farm </div>
         <div>Any Blockchain Game</div>
       </h1>
       <div class="banner-subtitle">
@@ -50,14 +50,26 @@ export default {
   name: "Banner",
   components: {},
   mounted() {
+    function updateTransform(el, type, value) {
+      let efs = el.style.transform.split(' ')
+      let newEfs = []
+      for(const ef of efs) {
+        if(ef.indexOf(type) === -1) {
+          newEfs.push(efs)
+        }
+      }
+      newEfs.push(`${type}(${value})`)
+      return newEfs.join(' ')
+    }
+
     function parallax() {
       let yScrollPosition = window.pageYOffset;
       const el = document.getElementById('parallax');
       el.style.bottom = (200 + yScrollPosition * 0.2) + 'px'
       const xbox = document.getElementById('xbox')
-      xbox.style.transform = `rotate(${-yScrollPosition * 0.1}deg)`;
+      xbox.style.transform = updateTransform(xbox,`rotate`, `(${-yScrollPosition * 0.1}deg)`);
       const ps5 = document.getElementById('ps5')
-      ps5.style.transform = `rotate(${yScrollPosition * 0.05}deg)`;
+      ps5.style.transform = updateTransform(ps5,`rotate`,`(${yScrollPosition * 0.05}deg)`);
       requestAnimationFrame(parallax);
     }
     parallax();
@@ -109,7 +121,7 @@ export default {
   }
 
   .banner-subtitle {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 32px;
     margin-top: 20px;
     text-align: center;
@@ -179,5 +191,58 @@ export default {
     background: var(--primary);
     margin-top: 12px;
     margin-right: 12px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .banner-background {
+      aspect-ratio: 375/720;
+      background: url("../assets/banner_mb.png") no-repeat;
+      background-size: cover;
+    }
+
+    .banner-title {
+      margin-top: 120px;
+      font-size: 48px;
+      line-height: 40px;
+      width: 320px;
+    }
+
+    .banner-title > div {
+      display: inline;
+    }
+
+    .banner-subtitle {
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 22px;
+      width: 280px;
+    }
+
+    #ps5 {
+      bottom: -20px;
+      right: -140px;
+      transform: scale(0.7);
+    }
+
+    #xbox {
+      top: -36px;
+      left: -90px;
+      transform: scale(0.3);
+    }
+
+    .intro {
+      position: static;
+      padding: 40px;
+      transform: none;
+    }
+
+    .intro-row {
+      flex-direction: column;
+    }
+
+    .intro-item {
+      padding-right: 0;
+      padding-top: 40px;
+    }
   }
 </style>

@@ -76,11 +76,6 @@ export default {
     text-align: center;
     text-transform: uppercase;
   }
-
-  h2.title:not(:first-child) {
-    margin-top: 80px;
-  }
-
   .row {
     display: flex;
     align-items: center;
@@ -89,5 +84,35 @@ export default {
 
   .item {
     margin-right: 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .partners {
+      padding-bottom: 120px;
+    }
+
+    h1.title {
+      background: url("../assets/partner_mb.png");
+      background-size: cover;
+      aspect-ratio: 375/100;
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    h2.title {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 12px;
+    }
+
+    h2.title:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 4px;
+    }
   }
 </style>

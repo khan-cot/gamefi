@@ -65,7 +65,7 @@ export default {
   .map {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 100px 60px;
+    grid-gap: 100px 0;
     padding: 24px var(--padding-section) var(--padding-section);
   }
 
@@ -85,15 +85,96 @@ export default {
   }
 
   .divider {
-    width: 6px;
+    width: 100%;
     height: 16px;
-    background: var(--primary);
     margin: 12px 0 30px;
+    position: relative;
+  }
+
+  .divider:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 6px;
+    background: var(--primary);
+  }
+
+  .divider:before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    height: 4px;
+    left: 0;
+    right: 0;
+    background: url("../assets/dot_arr.png");
+    background-size: cover;
   }
 
   .info {
     font-weight: bold;
     font-size: 24px;
     line-height: 36px;
+    padding-right: 60px;
+  }
+
+  @media screen and (max-width: 600px) {
+    h1.title {
+      background: url("../assets/roadmap_mb.png");
+      background-size: cover;
+      aspect-ratio: 375/100;
+      font-size: 28px;
+      line-height: 36px;
+      text-transform: none;
+    }
+
+    .map {
+      display: block;
+    }
+
+    .item {
+      position: relative;
+      padding: 0 60px 60px;
+    }
+
+    .time {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    .divider {
+      position: absolute;
+      top: 9px;
+      left: 12px;
+      margin: 0;
+      height: 100%;
+      width: 16px;
+    }
+
+    .divider:before {
+      top: 0;
+      left: 6px;
+      right: unset;
+      height: 100%;
+      width: 4px;
+      background: url("../assets/dotted_mb.png");
+      background-size: cover;
+    }
+
+    .divider:after {
+      top: 0;
+      right: 0;
+      bottom: unset;
+      height: 6px;
+      width: auto;
+    }
+
+    .info {
+      padding: 0;
+      font-size: 16px;
+      line-height: 28px;
+    }
   }
 </style>

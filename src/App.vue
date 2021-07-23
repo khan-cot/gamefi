@@ -7,7 +7,7 @@
     <Token/>
     <Roadmap/>
     <Team/>
-    <Partners/>
+<!--    <Partners/>-->
     <Subscribe/>
     <Footer/>
   </div>
@@ -19,7 +19,7 @@ import Header from "./section/Header";
 import Banner from "./section/Banner";
 import Features from "./section/Features";
 import Roadmap from "./section/Roadmap";
-import Partners from "./section/Partners";
+// import Partners from "./section/Partners";
 import Team from "./section/Team";
 import Subscribe from "./section/Subscribe";
 import Footer from "./section/Footer";
@@ -33,7 +33,7 @@ export default {
     Footer,
     Subscribe,
     Team,
-    Partners,
+    // Partners,
     Roadmap,
     Features,
     Banner,
@@ -49,7 +49,6 @@ export default {
     function addAnimation (entries) {
       entries.forEach((entry) => {
         if(entry.isIntersecting) {
-          console.log(entry)
           entry.target.classList.add('active')
         }
       })

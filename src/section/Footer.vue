@@ -1,10 +1,11 @@
 <template>
   <div class="wrapper">
     <div class="info">
-      <div style="flex: 1">
+      <div>
         <img class="logo" alt="logo" src="../assets/logo.svg"/>
-        <p>From the labs behind Red Kite launchpad</p>
-        <p>and several NFT games</p>
+        <div>
+          From the labs behind Red Kite launchpad <br/>and several NFT games
+        </div>
         <div class="social">
           <a href="https://t.me/GameFi_Official" target="_blank" style="margin-right: 8px">
             <img alt src="../assets/tele_green.svg"/>
@@ -33,7 +34,7 @@
         </div>
       </div>
     </div>
-    <div class="footer">© Icetea Foundation, Singapore, 2021</div>
+    <div class="footer">© Icetea Labs, 2021</div>
   </div>
 </template>
 
@@ -87,6 +88,10 @@ export default {
     padding: var(--padding-article) var(--padding-section) 80px;
   }
 
+  .info > div:first-child {
+    flex: 1;
+  }
+
   .logo {
     margin-bottom: 36px;
   }
@@ -124,5 +129,40 @@ export default {
     color: #C2C3D8;
     font-size: 14px;
     line-height: 24px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .info {
+      flex-wrap: wrap;
+    }
+
+    .info > div:first-child {
+      flex: 0 0 100%;
+      padding: 40px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #FFF4;
+    }
+
+    .info > div:first-child div {
+      text-align: center;
+    }
+
+    .info > div:first-child br {
+      display: none;
+    }
+
+    .column {
+      text-align: center;
+      flex: 0 0 50%;
+      padding-right: 0;
+    }
+
+    .column > div {
+      font-size: 16px;
+      line-height: 32px;
+    }
   }
 </style>

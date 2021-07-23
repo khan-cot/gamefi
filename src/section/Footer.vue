@@ -43,7 +43,7 @@ export default {
   name: "Footer",
   data() {
     return {
-      scrolls: ['Features', 'Roadmap', 'Our Team', 'Advisors'],
+      scrolls: ['Features', 'Roadmap', 'Our Team'],
       tokens: [
         { title: 'Token Metrics', link: ''},
         { title: 'Token Utilities', link: ''},
@@ -98,6 +98,9 @@ export default {
 
   .column {
     flex: 0 1 200px;
+  }
+
+  .column:not(:last-child) {
     padding-right: 40px;
   }
 

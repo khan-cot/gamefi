@@ -215,7 +215,7 @@ h1.title {
   left: 0;
   right: 0;
   z-index: 1;
-  margin: 22px 6px 4px;
+  margin: 0px 0px 20px 20px;
 }
 
 .info-name {

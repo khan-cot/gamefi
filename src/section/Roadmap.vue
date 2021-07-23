@@ -14,12 +14,12 @@
       </div>
       <div class="item fade">
         <div class="time">Q4 2021</div>
-        <div class="divider"></div>
+        <div class="divider right"></div>
         <div class="info">Launch marketplace and staking</div>
       </div>
       <div class="item fade">
         <div class="time">Q4 2021</div>
-        <div class="divider"></div>
+        <div class="divider left"></div>
         <div class="info">Launch NFT renting</div>
       </div>
       <div class="item fade">
@@ -110,6 +110,14 @@ export default {
     right: 0;
     background: url("../assets/dot_arr.png");
     background-size: cover;
+  }
+
+  .right:before {
+    right: -160px;
+  }
+
+  .left:before {
+    left: -160px;
   }
 
   .info {

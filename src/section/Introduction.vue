@@ -112,8 +112,9 @@ export default {
 
 .subtitle {
   width: 1060px;
-  font-size: 22px;
-  line-height: 32px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
   color: #D1D1D1;
   position: absolute;
   top: 50%;

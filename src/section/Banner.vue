@@ -50,26 +50,15 @@ export default {
   name: "Banner",
   components: {},
   mounted() {
-    function updateTransform(el, type, value) {
-      let efs = el.style.transform.split(' ')
-      let newEfs = []
-      for(const ef of efs) {
-        if(ef.indexOf(type) === -1) {
-          newEfs.push(efs)
-        }
-      }
-      newEfs.push(`${type}(${value})`)
-      return newEfs.join(' ')
-    }
 
     function parallax() {
       let yScrollPosition = window.pageYOffset;
       const el = document.getElementById('parallax');
       el.style.bottom = (200 + yScrollPosition * 0.2) + 'px'
       const xbox = document.getElementById('xbox')
-      xbox.style.transform = updateTransform(xbox,`rotate`, `(${-yScrollPosition * 0.1}deg)`);
+      xbox.style.transform = (window.innerWidth < 600 ) ? `scale(0.3) rotate(${-yScrollPosition * 0.1}deg)` : `rotate(${-yScrollPosition * 0.1}deg)`
       const ps5 = document.getElementById('ps5')
-      ps5.style.transform = updateTransform(ps5,`rotate`,`(${yScrollPosition * 0.05}deg)`);
+      ps5.style.transform = (window.innerWidth < 600 ) ? `scale(0.7) rotate(${yScrollPosition * 0.05}deg)` : `rotate(${yScrollPosition * 0.05}deg)`
       requestAnimationFrame(parallax);
     }
     parallax();

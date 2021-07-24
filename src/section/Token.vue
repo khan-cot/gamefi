@@ -1,7 +1,7 @@
 <template>
   <div id="token">
     <h1 class="title" >
-      GFI Token Economy
+      GAFI Token Economy
     </h1>
     <div class="info slide">
       <div class="item slideLeft">
@@ -9,7 +9,7 @@
         <img alt src="../assets/bg1_mb.png" class="mobile"/>
         <div class="detail">
           <h2>Discounts</h2>
-          <p>GFI holders receive discounts on trading and yield fees.</p>
+          <p>GAFI holders receive discounts on trading and yield fees.</p>
         </div>
       </div>
       <div class="item">
@@ -25,7 +25,7 @@
         <img alt src="../assets/bg3_mb.png" class="mobile"/>
         <div class="detail">
           <h2>Governance</h2>
-          <p>GFI stakers have the ability to propose the direction of the ecosystem.</p>
+          <p>GAFI stakers have the ability to propose the direction of the ecosystem.</p>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@
         </a>
       </div>
       <div class="item invert">
-        <a href="https://www.polygon.com/" target="_blank">
+        <a href="https://polygon.technology/" target="_blank">
           <img alt="polygon" src="../assets/polygon.png"/>
         </a>
       </div>
@@ -73,7 +73,7 @@ h1.title {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 48px;
   line-height: 56px;
 }
@@ -112,7 +112,7 @@ h1.title {
 
 .detail h2 {
   margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 32px;
   line-height: 40px;
 }

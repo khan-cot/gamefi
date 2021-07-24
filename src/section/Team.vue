@@ -172,7 +172,7 @@ h1.title {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 32px;
   line-height: 40px;
   text-transform: uppercase;
@@ -195,6 +195,7 @@ h1.title {
   width: 100%;
   position: relative;
   z-index: 1;
+  display: block;
 }
 
 .member .hover {
@@ -219,7 +220,7 @@ h1.title {
 }
 
 .info-name {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 4px;

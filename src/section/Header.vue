@@ -23,7 +23,7 @@
       </div>
       <p>Follow</p>
       <div class="social">
-        <a href="https://t.me/GameFi_Official" target="_blank" style="margin-right: 8px">
+        <a href="https://t.me/GameFi_OfficialANN" target="_blank" style="margin-right: 8px">
           <img alt src="../assets/tele_green.svg"/>
         </a>
         <a href="https://twitter.com/GameFi_Official" target="_blank">
@@ -85,7 +85,7 @@ export default {
   .header-link_item {
     list-style-type: none;
     margin: 0 20px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 26px;
     color: white;
     cursor: pointer;
@@ -139,7 +139,7 @@ export default {
     }
 
     .link {
-      font-weight: 700;
+      font-weight: 600;
       font-size: 20px;
       line-height: 28px;
       margin-bottom: 20px;

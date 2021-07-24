@@ -56,7 +56,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 32px;
     line-height: 40px;
     text-transform: uppercase;
@@ -79,7 +79,7 @@ export default {
 
   .time {
     color: var(--primary);
-    font-weight: bold;
+    font-weight: 600;
     font-size: 20px;
     line-height: 28px;
   }
@@ -121,7 +121,7 @@ export default {
   }
 
   .info {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 24px;
     line-height: 36px;
     padding-right: 60px;

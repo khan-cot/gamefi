@@ -62,13 +62,13 @@ export default {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 48px;
     line-height: 56px;
   }
 
   h2.title {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 24px;
     line-height: 36px;
     color: var(--primary);

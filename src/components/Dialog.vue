@@ -155,14 +155,14 @@ export default {
   }
 
   .title {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 32px;
     line-height: 40px;
   }
 
   .subtitle {
     margin: 4px 0;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 20px;
     line-height: 28px;
     color: var(--primary);

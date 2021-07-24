@@ -9,7 +9,7 @@
     </div>
     <div :class="`message ${message.ok ? 'success' : 'error'}`">{{ message.info }}</div>
     <div class="social">
-      <a href="https://t.me/GameFi_Official" target="_blank">
+      <a href="https://t.me/GameFi_OfficialANN" target="_blank">
         <img alt src="../assets/tele_black.svg"/>
       </a>
       <a href="https://twitter.com/GameFi_Official" target="_blank">
@@ -111,7 +111,7 @@ input {
   align-items: center;
   justify-content: center;
   color: var(--primary);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 20px;
   line-height: 28px;
   padding: 14px 40px;

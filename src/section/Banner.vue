@@ -102,7 +102,7 @@ export default {
   }
 
   .banner-title div:first-child {
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .banner-title div:last-child {

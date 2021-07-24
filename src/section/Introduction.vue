@@ -84,7 +84,7 @@ export default {
 }
 
 .detail h1 {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 48px;
   line-height: 56px;
   margin-bottom: 32px;
@@ -144,7 +144,7 @@ export default {
 }
 
 .item div {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 32px;
   line-height: 40px;
   margin-bottom: 12px;

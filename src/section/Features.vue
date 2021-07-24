@@ -82,7 +82,7 @@ export default {
 }
 
 .features-title h1 {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 48px;
   line-height: 56px;
 }
@@ -116,7 +116,7 @@ export default {
 
 .feature-item .title {
   margin: 20px 0 12px;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 24px;
   line-height: 36px;
 }
@@ -151,7 +151,7 @@ export default {
   display: flex;
   font-size: 24px;
   line-height: 36px;
-  font-weight: 700;
+  font-weight: 600;
   padding: 20px 4px;
   width: 640px;
 }

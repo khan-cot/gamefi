@@ -7,7 +7,7 @@
           From the labs behind Red Kite launchpad <br/>and several NFT games
         </div>
         <div class="social">
-          <a href="https://t.me/GameFi_Official" target="_blank" style="margin-right: 8px">
+          <a href="https://t.me/GameFi_OfficialANN" target="_blank" style="margin-right: 8px">
             <img alt src="../assets/tele_green.svg"/>
           </a>
           <a href="https://twitter.com/GameFi_Official" target="_blank">
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="column">
-        <h2 class="title">FAQ</h2>
+        <h2 class="title">Contact</h2>
         <div v-for="(item, i) in faqs" :key="i" @click="goTo(item, 'open')">
           {{item.title}}
         </div>
@@ -49,10 +49,7 @@ export default {
         { title: 'Token Utilities', link: ''},
       ],
       faqs: [
-        { title: 'Terms and Conditions', link: ''},
-        { title: 'Whitepaper', link: ''},
-        { title: 'Contact Us', link: ''},
-        { title: 'FAQ', link: ''},
+        { title: 'Contact Us', link: 'https://t.me/GameFi_Official'},
       ]
     }
   },
@@ -105,7 +102,7 @@ export default {
   }
 
   .title {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 20px;
     line-height: 26px;
     margin-top: 24px;

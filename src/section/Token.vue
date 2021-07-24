@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <h1 class="title">
+    <h1 class="title support">
       Supported By
     </h1>
     <div class="grid">
@@ -76,6 +76,10 @@ h1.title {
   font-weight: 600;
   font-size: 48px;
   line-height: 56px;
+}
+
+h1.title.support {
+  background: url("../assets/supported.png");
 }
 
 .info {
